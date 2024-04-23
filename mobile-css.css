@@ -8,22 +8,45 @@
     }
     #AboutMe{
         display : inline-block;
-        font-size: 35px;
+        font-size:large;
         margin-left: 10%;
+        margin-top: 10%;
         width : 360px
     }
-    #AboutMepara{
-        width : 100%;
-    }
+   
 
     #greet{
-        font-size:50px;
+        font-size:large;
     }
 
     #profile{
-        font-size: 35px;
+        font-size: large;
     }
 
+    #AvailableNote{
+        font-size: 10px;
+    }
+
+    #AboutMepara{
+        
+        font-size: 8px;
+        width : 80%;
+    }
+
+    .contact-btn{
+        font-size: x-small;
+        padding: .5rem
+    }
+
+    .contact-icon-btn{
+        font-size: x-small;
+        padding: .4rem
+    }
+
+    .contact-copy-btn{
+        font-size: x-small;
+        padding: .4rem
+    }
     #Skills{
         width : 100%;
     }
