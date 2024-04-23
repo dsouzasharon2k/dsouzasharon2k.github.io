@@ -1,0 +1,34 @@
+@media screen and (max-width: 360px) {
+    header.big-screen {
+      display: none;
+    }
+
+    #main-content{
+        display : block;
+    }
+    #AboutMe{
+        display : inline-block;
+        font-size: 35px;
+        margin-left: 10%;
+        width : 360px
+    }
+    #AboutMepara{
+        width : 100%;
+    }
+
+    #greet{
+        font-size:50px;
+    }
+
+    #profile{
+        font-size: 35px;
+    }
+
+    #Skills{
+        width : 100%;
+    }
+
+    #SkillsChildDiv{
+        width : 100%;
+    }
+  }
