@@ -61,22 +61,6 @@ document.addEventListener("DOMContentLoaded", function() {
 document.addEventListener("DOMContentLoaded", function() {
     // Get the SVG element
     const svg = document.getElementById("animated-online-icon");
-  
-    // Define the SVG content
-    /*svg.innerHTML = `
-      <!-- Background rectangle with dynamic color -->
-      <rect width="100" height="100" fill="var(--background-color-light)"/>
-      <!-- Circles with dynamic fill color -->
-      <circle cx="50" cy="50" r="40" fill="var(--background-color-light)" class="animated-circle"/>
-      <circle cx="50.5" cy="50.5" r="32.5" fill="var(--background-color-light)" />
-      <circle cx="50" cy="50" r="25" fill="var(--background-color-light)" class="animated-circle"/>
-      <circle cx="50.5" cy="50.5" r="17.5" fill="var(--background-color-light)" />
-      <!-- Paths with dynamic fill color -->
-      <path d="M48.8842 47.1101L32.4297 7.75229L65.3387 7.75229L48.8842 47.1101Z" fill="var(--background-color-light)"/>
-      <path d="M50 52L66.4545 91.3578H33.5455L50 52Z" fill="var(--background-color-light)"/>
-      <!-- Pulsating circle with dynamic fill color -->
-      <circle cx="50" cy="50" r="10" fill="var(--background-color-light)" class="animated-circle"/>
-    `;*/
     
     // Get all circles with the class "animated-circle"
     const circles = svg.querySelectorAll('.animated-circle');
@@ -111,84 +95,6 @@ document.addEventListener("DOMContentLoaded", function() {
     // Call the changeColor function every 0.7 seconds
     setInterval(changeColor, 700); // Adjust this interval as needed
   
-
-
-/*-----------------------End of online available button
-var testiomnialData = [
-    {
-        avatar: "https://img.freepik.com/free-photo/woman-with-long-hair-yellow-hoodie-with-word-music-it_1340-39068.jpg",
-        name: "SLCM",
-        review: "Mind-blowing discovery! changed my routine. Essential for everyone. A vise advice to all interested. Can't imagine without it!"
-    },
-    {
-        avatar: "https://img.freepik.com/free-photo/close-up-portrait-young-bearded-man-white-shirt-jacket-posing-camera-with-broad-smile-isolated-gray_171337-629.jpg",
-        name: "Merilee Beal",
-        review: "Unbelievable gem! Altered my life. A must-have now. Wholeheartedly advise it to everyone. An absolute game-changer"
-    },
-    {
-        avatar: "https://img.freepik.com/free-photo/handsome-african-guy-with-stylish-haircut-taking-photo-digital-camera_171337-1345.jpg",
-        name: "Suzi Lankester",
-        review: "Phenomenal addition! Completely transformed my days. Can't go without it. Strongly endorse for all. A game-changer for sure!"
-    },
-    {
-        avatar: "https://img.freepik.com/free-photo/pretty-smiling-joyfully-female-with-fair-hair-dressed-casually-looking-with-satisfaction_176420-15187.jpg",
-        name: "Gaston Cunnow",
-        review: "Amazing product! It changed my life. Can't live without it now. Highly recommended to everyone!"
-    },
-    {
-        avatar: "https://img.freepik.com/free-photo/portrait-white-man-isolated_53876-40306.jpg",
-        name: "Marys Lobb",
-        review: "Life-altering find! Indispensable now. Enthusiastically suggest to all. A game-changer for everyone!"
-    },
-    ]
-var slideHolder = document.querySelector("#slideHolder1")
-console.log(slideHolder)
-for (let i of testiomnialData) slideHolder.innerHTML += `<div class="swiper-slide"> <div class="ImgHolder"><img src="${i.avatar}"></div><div class="ContentHolder"><h3>${i.name}</h3><p>${i.review}</p></div></div>`
-
-const swiper = new Swiper('#craouselContainer', {
-    grabCursor: true,
-    centeredSlides: true,
-    slidesPerView: 2,
-    loop: true,
-    spaceBetween: 30,
-    effect: "coverflow",
-    coverflowEffect: {
-        rotate: 0,
-        depth: 800,
-        slideShadows: true,
-    },
-    pagination: {
-        el: '.swiper-pagination',
-        clickable: true
-    },
-    //autoplay: { delay: 1000 }
-});
-window.onresize = queryResizer
-queryResizer()
-function queryResizer() {
-    if (window.innerWidth < 724) swiper.params.slidesPerView = 2
-    if (window.innerWidth > 501) swiper.params.slidesPerView = 2
-    if (window.innerWidth > 724) swiper.params.slidesPerView = 2
-    if (window.innerWidth < 501) swiper.params.slidesPerView = 2
-    swiper.update()
-}*/
-
-var swiper1 = new Swiper('.edu-blog-slider', {
-    spaceBetween: 30,
-    effect: 'fade',
-    loop: true,
-    mousewheel: {
-      invert: false,
-    },
-    // autoHeight: true,
-    pagination: {
-      el: '.edu-blog-slider__pagination',
-      clickable: true,
-    }
-  });
-
-
-
 
 
 });
