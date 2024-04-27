@@ -1,57 +1,206 @@
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 853px) {
     header.big-screen {
-      display: none;
+        display:none;
     }
-
-    #main-content{
-        display : block;
+    #about-me-section{
+        width : 90%;
+        margin-top : 5%;
     }
-    #AboutMe{
-        display : inline-block;
-        font-size:large;
-        margin-left: 5%;
-        margin-top: 10%;
-        width : 360px
-    }
-   
 
     #greet{
-        font-size:large;
+    font-size: 8vw;
     }
 
-    #profile{
-        font-size: large;
+    .name{
+    font-size: 7.5vw;
+    }
+    
+    #profile-section{
+    font-size: 6vw;
+    }
+    
+    #profile{ 
+        font-size: 6vw;
+    }
+    
+    .based-in-text{
+    font-size: 5vw;
+    }
+      
+    #india-flag-icon{
+    height: 5vw;
     }
 
-    #AvailableNote{
-        font-size: 10px;
+    /*---available button------*/
+    
+    #available-div{
+    display: flex; /* Use flexbox */
+    align-items: center;       
     }
-
-    #AboutMepara{
+    
+    #available-note{
+    font-family: "myonlineFont";
+    font-size: 1.4vw;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    }
+      
+      /* Keyframes for the pulse animation */
+      @keyframes pulse {
+        0% { transform: scale(1); opacity: 1; }
+        50% { transform: scale(1); opacity: 0.5; }
+        100% { transform: scale(1); opacity: 1; }
+      }
+      
+      
+      .animated-circle-pulse {
+        animation: pulse .7s infinite; /* Apply the colorChange animation for 2 seconds infinitely */
+      }
+      
+      .animated-circle {
+        animation: pulse .7s infinite; /* Apply the colorChange animation for 2 seconds infinitely */
+      }
+      
+      /*--------end available button-------*/
+      
+      #about-me-para{
+        font-size: 1.3vw;
+        margin-top: 20px;
+        margin-bottom: 20px;
+        text-align:right;
+      }
+      
+      .contact-btn{
+        color: rgb(18, 92, 219);
+        padding: 1%;
+        font-size: 1.3vw;
+        text-decoration: none;
+        border-radius:100px;
+        font-family: Helvetica;
         
-        font-size: 8px;
-        width : 80%;
+      }
+      
+      .contact-btn:hover {
+        background-color: rgba(89, 91, 95, 0.712);
+        color: rgb(255, 255, 255);
+      }
+      
+      
+      
+      
+      /*
+      #Note{
+        font-family: Helvetica Light;
+        font-size: 25px;
+        float: left;
+        margin-top: 20px;
+        margin-bottom: 0px;
+      }
+      */
+      
+      .project-btn{
+        background-color: #ffffff;
+        color: rgb(0, 0, 0);
+        padding: .5rem .7rem;
+        font-size: 2vw;
+        text-decoration: none;
+        /*
+        border-radius:100px;
+        border : 1px solid #000;*/
+        font-family: Helvetica;
+        margin-right: 10px;
+      }
+      
+      .project-btn:hover {
+        color: #265DF5;
+      }
+      
+      .project-btn:hover #path2{
+        fill: #265DF5;
+      }
+      
+      #path2{
+        color : white;
+      }
+      
+      .main-content-bottom-design
+      {
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height:fit-content ;
+        overflow: hidden;
+        line-height: 0;
+      } 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    .blog-slider__item {
+        flex-direction: column;
+      }
+      
+    .blog-slider__img {
+
+    transform: translateX(-80px) translateY(-20px);;
+
     }
 
-    .contact-btn{
-        font-size: x-small;
-        padding: .5rem
-    }
 
-    .contact-icon-btn{
-        font-size: x-small;
-        padding: .4rem
-    }
+    .blog-slider__button {
+        padding: 15px;
+      }
 
-    .contact-copy-btn{
-        font-size: x-small;
-        padding: .4rem
-    }
-    #Skills{
-        width : 100%;
-    }
+    
+.edu-blog-slider__item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .edu-blog-slider__img {
+    display: flex;
+    flex-direction: row;
+    
+    width: 30%;
+    height: 30%;
 
-    #SkillsChildDiv{
-        width : 100%;
-    }
+    transform: translateX(-150px) translateY(-40px);;
+   
+  }
+  
+  .form{
+    box-shadow: -10px 10px 10px rgba(0, 0, 0, 0.528);
+  }
+
+
+
+
+
+
+
+      
   }
