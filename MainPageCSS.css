@@ -1,10 +1,68 @@
 @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;500;600;700;800;900;1000&display=swap');
 @import url('https://fonts.cdnfonts.com/css/greeting');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+
+
+
+    
+/* ======================GREET===========================================*/
+@font-face {
+  font-family: myCursiveFont;
+  src: url(../2_Assets/fonts/LemonJelly.ttf);
+}
 
 @font-face {
-    font-family: myCursiveFont;
-    src: url(../2_Assets/fonts/LemonJelly.ttf);
+  font-family: greeting-font;
+  src: url(../2_Assets/fonts/AudreyTatum.otf);
 }
+
+@font-face {
+  font-family: greeting-font-2;
+  src: url(../2_Assets/fonts/Xanthoula.ttf);
+}
+
+@font-face {
+  font-family: greeting-font-3;
+  src: url(../2_Assets/fonts/English\ Speakers.otf);
+}
+
+@font-face {
+  font-family: name-font;
+  src: url(../2_Assets/fonts/basting-brush.regular.ttf);
+}
+
+@font-face {
+  font-family: name-font-2;
+  src: url(../2_Assets/fonts/rockybilly.regular.ttf);
+}
+
+@font-face {
+  font-family: name-font-3;
+  src: url(../2_Assets/fonts/Hand\ Made.otf);
+}
+/*---------------------DEVEloper Profiles-------------------------------------------*/
+
+@font-face {
+  font-family: dev-profile-font;
+  src: url(../2_Assets/fonts/chary___.ttf);
+}
+
+@font-face {
+  font-family: dev-profile-font-2;
+  src: url(../2_Assets/fonts/BACKTO1982.TTF);
+}
+/*---------------------INDIA-------------------------------------------*/
+
+@font-face {
+  font-family: india-font;
+  src: url(../2_Assets/fonts/SAMAN___.TTF);
+}
+
+@font-face {
+  font-family: india-font-2;
+  src: url(../2_Assets/fonts/prakrta_.ttf);
+}
+
 @font-face {
     font-family: myonlineFont;
     src: url(../2_Assets/fonts/NotoSansMono-SemiBold.ttf)
@@ -20,70 +78,184 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    
 }
 
+.page-background{
+  min-height: 100vh;
+  background-color: var(--background-color-light);
+  cursor: url('../2_Assets/cursor/cursor-svgrepo-com.png'),auto;
+}
+
+/********************************/
+
+
+@keyframes rotate {
+  from {
+    rotate: 0deg;
+  }
+  
+  50% {
+    scale: 1 1.5;
+  }
+  
+  to {
+    rotate: 360deg;
+  }
+}
+
+/*
+#blob {
+  background-color: black;
+  height: 34vmax;
+  aspect-ratio: 1;
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  translate: -50% -50%;
+  border-radius: 50%;
+  background: linear-gradient(to right, rgb(127, 255, 238), #06038D);
+  animation: rotate 20s infinite;
+  opacity: 0.8;
+  z-index:-1;
+}
+
+#blur {
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  top:0px;
+  left:0px;
+  backdrop-filter: blur(20vmax);
+  z-index:-1;
+}*/
+
+/********************************/
+.section-title{
+  font-style: 'Helvetica Light'; 
+  color: rgb(255, 255, 255); 
+  font-size: 3.5vw;
+}
+
+.section-title-black{
+  font-style: 'Helvetica Light'; 
+  color: rgb(0, 0, 0); 
+  font-size: 3.5vw;
+}
 /*=============== HEADER ===============*/
-header.big-screen {
-    position: fixed;
-    top: 0; /* Position at the top of the viewport */
-    left: 0; /* Align to the left edge of the viewport */
-    width: 100%; /* Occupy the full width of the viewport */
-    background-color: #000;
-    padding: 15px;
-    display: flex;
-    flex-direction: row ;
-    justify-content: flex-start;
-    align-items: center;
-    z-index: 100;
-    white-space: nowrap;
-    overflow: hidden;
-    box-shadow: 0px 0px 100px 0px #797777;
+.sd-logo {
+  height: 70px; /* Adjust the height of the logo */
+  width: fit-content;
+  margin-right: 10%
+}
+
+.sd-logo2 {
+  height: 70px; /* Adjust the height of the logo */
+  width: fit-content;
+  margin-right: 10%
 }
 
 
-.logo {
-    margin-left: 10%;
-    height: 70px; /* Adjust the height of the logo */
-    width: fit-content;
-    align-self : left;
-    margin-right: 5%
+nav{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: #000000;
+  box-shadow: 0px 0px 100px 0px #797777;
+  z-index: 10;
 }
-
-.nav-links {
-  list-style-type: none; /*Removes ::marker or bullets*/
+nav .navbar{
+  margin-left: 5%;
   display: flex;
-  justify-content: flex-end;
-  width : fit-content;
-  margin-right: 5%;
-  align-self: flex-end;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  height: fit-content;
+  width: 100%;
+  /* background: red; */
+  padding: 0 50px;
+}
+.navbar .logo a{
+  font-size: 1.4vw;
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+}
+nav .navbar .nav-links{
+  line-height: 70px;
+  height: 100%;
+  }
+nav .navbar .links{
+  display: flex;
+}
+nav .navbar .links li{
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  list-style: none;
+  padding: 0 14px;
+}
+nav .navbar .links li a{
+  height: 100%;
+  text-decoration: none;
+  font-family: Helvetica;
+  white-space: nowrap;
+  color: #fff;
+  font-size: 1.2vw;
+  font-weight: 500;
 }
 
-.nav-links li a {
-    color: #fff;
-    text-decoration: none;
-    font-family:Helvetica;
-    font-size: 1.5vw;
-    padding: 0.5em;    
+.links li:hover .htmlcss-arrow,
+.links li:hover .js-arrow{
+transform: rotate(180deg);
 }
 
+
+.navbar .search-box{
+  position: relative;
+  height: 40px;
+  width: 40px;
+}
+.navbar .search-box i{
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  line-height: 40px;
+  text-align: center;
+  font-size: 22px;
+  color: #fff;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.navbar .nav-links .sidebar-logo{
+  display: none;
+}
+.navbar .bx-menu{
+  display: none;
+}
 .download-btn{
-    display: block;
-    margin-left: 5%;
-    margin-right: auto;
-    background-color: #ffffff;
-    color: rgb(0, 0, 0);
-    padding: .5rem 1rem;
-    font-size: 1.5vw;
-    text-decoration: none;
-    border-radius:100px;
-    font-family: Helvetica;
-    width : fit-content;
+  display: block;
+  
+  background-color: #ffffff;
+  color: rgb(0, 0, 0);
+  padding: .5rem 1rem;
+  font-size: 1.2vw;
+  text-decoration: none;
+  border-radius:100px;
+  font-family: Helvetica;
+  width : fit-content;
 }
 
 .download-btn:hover {
-    background-color: rgba(105, 108, 116, 0.399);
-    color: rgb(255, 255, 255);
-  }
+  background-color: rgba(105, 108, 116, 0.399);
+  color: rgb(255, 255, 255);
+}
+
+
 
 /*=============== Scroll To Top Button  ===============*/
 
@@ -107,41 +279,28 @@ header.big-screen {
 #to-top-btn:hover {
   background-color: #555;
 }
+/*==============Header side nav mobile==========*/
 
 /*=============== ABOUT ME ===============*/
 
-#about-me-section{    
-  margin-top: 160px;
-  margin-left: 10%;
-  display: inline-block;
-  width : 50%
-}
-
-#greet{
-  font-size: 4vw;
-  font-family: 'Greeting';
+#main-content {
   text-align: center;
 }
 
-.name{
-  font-size: 4vw;
-}
-
-.based-in-text{
-  display: flex;
-  font-size: 2.5vw;
-  align-items: center;
-  justify-content: flex-start;
-}
-
-#india-flag-icon{
-  height: 2.5vw;
+#about-me-section{    
+  margin-top: 100px;
+  margin-left: 5%;
+  margin-right: 5%;
+  margin-bottom: 2%;
+  display: inline-block;
+  width : 85%;
+  text-align: center;
 }
 
 .wave {
   animation-name: wave-animation;  /* Refers to the name of your @keyframes element below */
-  animation-duration: 2.5s;        /* Change to speed up or slow down */
-  animation-iteration-count: finite;/* Never stop waving :) */
+  animation-duration: 4s;        /* Change to speed up or slow down */
+  animation-iteration-count: 1;/* Never stop waving :) */
   transform-origin: 70% 70%;       /* Pivot around the bottom-left palm */
   display: inline-block;
 }
@@ -157,34 +316,99 @@ header.big-screen {
   100% { transform: rotate( 0.0deg) }
 }
 
+#greet{
+  font-size: 3vw; /*4vw*/
+  font-family: 'greeting-font-3';
+  font-weight: bold;
+}
+
+.name{
+  font-family: 'name-font-3';
+  font-size: 6vw;
+  /*border : 0.2vw solid #000;
+  padding : 0% 3%;*/
+}
+
 #profile-section{
-  display: flex; 
-  align-items: center;
+  display: grid; 
+  justify-content: center;
   font-size: 3.5vw;
 }
 
 #profile{ 
-    font-size: 3.5vw;
-    font-family: Helvetica;
-    display:inline - block;
+  display: flex;
+    font-size: 5vw;
+    font-family: dev-profile-font;
+    justify-self: center;
+   text-align: center;
+   align-items: center;
     /*font-family: "myCursiveFont";*/
     /*"Lucida Console"*/
-    height: auto; /* Adjust the height as needed */
+    height: 5vw; /* Adjust the height as needed */
     overflow: hidden; /* Hide content that exceeds the container's height */   
 }
 
+/*#profile b{
+  font-family: dev-profile-font-2;
+  font-size: 2.3vw;;
+  justify-self: center;
+  text-align: center;
+  align-items: center;
+}*/
+
+.based-in-text{
+  display: flex;
+  font-size: 2.5vw;
+  align-items: center;
+  justify-content: center;
+  margin-top: 1%
+  
+}
+
+.india-text{
+  font-family: india-font;
+  font-size: 2.5vw;
+  background: -webkit-linear-gradient(#FF671F, #d6d6d6, green );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+#india-flag-icon{
+  height: 2.5vw;
+}
 /*---available button------*/
 
 #available-div{
   display: flex; /* Use flexbox */
-  align-items: center;       
+  flex-direction: column; 
+  justify-content:center; 
+  align-items: center; 
+  text-align : center; 
+}
+
+.available-for-hire-div{
+  display:flex; 
+  justify-content:center; 
+  align-items: center; 
+  text-align : center;
+  padding: .5% 3%;    
+  border:1px solid #31EF2D;
+  background-color: #b5eeb4a4;
+  border-radius: 5vw;
+  margin-top: .5%;
+  animation: pulse 1s infinite;;
+  
+}
+
+#animated-online-icon{
+  height : 1vw;
+  width : 1vw;
 }
 
 #available-note{
   font-family: "myonlineFont";
-  font-size: 1.4vw;
-  margin-top: 20px;
-  margin-bottom: 20px;
+  color :#2b802a;
+  font-size: 1vw;
 }
 
 /* Keyframes for the pulse animation */
@@ -195,40 +419,46 @@ header.big-screen {
 }
 
 
-
-.animated-circle-pulse {
-  animation: pulse .7s infinite; /* Apply the colorChange animation for 2 seconds infinitely */
-}
-
 .animated-circle {
-  animation: pulse .7s infinite; /* Apply the colorChange animation for 2 seconds infinitely */
+  animation: pulse 1s infinite; /* Apply the colorChange animation for 2 seconds infinitely */
 }
 
+
+.contact-div{
+width: 100%; 
+margin-top:10px; 
+margin-left:50px; 
+font-size:50px;
+}
 /*--------end available button-------*/
 
 #about-me-para{
   font-size: 1.3vw;
   margin-top: 20px;
   margin-bottom: 20px;
-  text-align:right;
+  text-align:center;
 }
 
 .contact-btn{
   color: rgb(18, 92, 219);
   padding: 1%;
-  font-size: 1.3vw;
+  font-size: 2vw;
   text-decoration: none;
-  border-radius:100px;
   font-family: Helvetica;
   
 }
 
 .contact-btn:hover {
-  background-color: rgba(89, 91, 95, 0.712);
-  color: rgb(255, 255, 255);
+  color: #000;
 }
 
+.contact-btn:hover .fiverr #path2 {
+  fill: #000;
+}
 
+.contact-btn:hover .freelancer #path2 {
+  fill: #000;
+}
 
 
 /*
@@ -242,7 +472,6 @@ header.big-screen {
 */
 
 .project-btn{
-  background-color: #ffffff;
   color: rgb(0, 0, 0);
   padding: .5rem .7rem;
   font-size: 2vw;
@@ -252,6 +481,7 @@ header.big-screen {
   border : 1px solid #000;*/
   font-family: Helvetica;
   margin-right: 10px;
+
 }
 
 .project-btn:hover {
@@ -279,7 +509,7 @@ header.big-screen {
 
 /*=============== SKILLS ===============*/
 
-#skills{
+#skills-section{
     display: flex; /* Use flexbox */
     flex-direction: column; /* Arrange children in a column */
     justify-content: center;
@@ -333,12 +563,14 @@ header.big-screen {
 
   
 }
+
 .skills-btn text{ 
   margin-top: 5px;
 }
 
-
-
+#android-studio-text{
+  font-size: .79vw;
+}
   .skills-section-bottom-design {
     top: 0;
     left: 0;
@@ -358,18 +590,17 @@ header.big-screen {
 
 .skills-section-bottom-design .shape-fill {
     fill: #000000;
+    margin-top: 10%;
 }
 
 /*=============== EXPERIENCE ===============*/
 
 #experience-section{
-  background-color: #ffffff;
   width : 100%;
   padding: 3% ;
   }
 
 .slides {
-  background-color: #ffffff;
   /*background-image: linear-gradient(147deg, #FFE53B 0%, #fd3838 74%);*/
   display: flex;
   flex-direction: column;
@@ -460,28 +691,24 @@ header.big-screen {
 
 .experience-section-bottom-design {
   position: relative;
-  top: 0;
+  bottom: 0;
   left: 0;
   width: 100%;
-  height: fit-content;
   overflow: hidden;
   line-height: 0;
   transform: rotate(180deg);
-  background-color: #000;
-  z-index: -1;
-
 }
 
 .experience-section-bottom-design svg {
   position: relative;
   display: block;
-  width: calc(227% + 1.3px);
-  height: 52px;
+  width: calc(100% + 1.3px);
 }
 
 .experience-section-bottom-design .shape-fill {
-  fill: #ffffff;
+  fill: #000000;
 }
+
 
 /*=============== EDUCATION ===============*/
 
@@ -574,6 +801,7 @@ header.big-screen {
 
 .education-section-bottom-design .shape-fill {
   fill: #000000;
+
 }
 
 /*=============== CERTIFICATIONS ==================*/
@@ -583,13 +811,9 @@ header.big-screen {
     justify-content: center;
     align-items: center;   
     text-align: center; 
-
-    background-color: #ffffff;
     height : auto;
     width : 100%;
     padding-bottom: 20px;
-    
-    
     white-space: pre-line; /* Preserve line breaks */
 }
 
@@ -601,6 +825,14 @@ header.big-screen {
   color :rgb(18, 92, 219)
 }
 
+.certifications-icons a{
+  font-size: 3vw;
+}
+
+.certifications-icons a svg{
+  width : 3vw ;
+  height : 3vw;
+} 
 /*=============== PROJECTS ==================*/
 
 #project-section{
@@ -638,9 +870,20 @@ header.big-screen {
   fill: #000000;
 }
 
+.my-project-icons{
+  display:flex; 
+  flex-direction : row; 
+  justify-content : space-evenly; 
+  align-items : center;
+  gap: 2vw;
+  margin-bottom: 2vw;
+  width:fit-content;
+  height:fit-content;
+}
+
 .my-project-btn{
   color: rgb(255, 255, 255);
-  font-size: 2vw;
+  font-size: 2.5vw;
   text-decoration: none;
   /*
   border-radius:100px;
@@ -659,7 +902,6 @@ header.big-screen {
   text-align: center; 
   justify-content: center;
   align-items: center;
-  background-color: #ffffff;
   height : auto;
   width : 100%;
   
@@ -675,7 +917,7 @@ header.big-screen {
   gap: 1vw;
   margin-bottom: 2vw;
   width:fit-content;
-  height:fit-content;
+  height:3vw;
 }
 
 .contact-me-btn{
@@ -690,16 +932,24 @@ header.big-screen {
 .contact-me-btn:hover{
   color: rgb(0, 0, 0);
   padding: 1%;
-  font-size: 1.7vw;
+  font-size: 2.5vw;
   text-decoration: none;
   font-family: Helvetica;  
 }
 
+.contact-me-btn svg{
+  width: 2vw;
+  fill : rgb(18, 92, 219); 
+}
 
+.contact-me-btn:hover svg #path2 {
+  fill:#000000;
+  font-size: 2.5vw;
+}
 .form{
   display: flex;
   width : 30%;
-  background-color :rgba(135, 134, 134, 0.4);
+  background-color :rgb(18, 92, 219);
   border-radius: 1vw;
   box-shadow: -20px 30px 10px rgba(0, 0, 0, 0.528);
   height : fit-content;
