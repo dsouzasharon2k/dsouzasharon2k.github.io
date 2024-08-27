@@ -162,4 +162,20 @@ jsArrow.onclick = function() {
  navLinks.classList.toggle("show3");
 }
 
+    //favicon
+    // select the favicon 
+const faviconEl = document.querySelector('link[rel="icon"]')
+
+// watch for changes 
+const mediaQuery = window.matchMedia('(prefers-color-scheme: dark)')
+mediaQuery.addEventListener('change', themeChange)
+
+// listener 
+function themeChange(event) {
+  if (event.matches) {
+    faviconEl.setAttribute('href', '../2_Assets/logo/dark.png')
+  } else {
+    faviconEl.setAttribute('href', '../2_Assets/logo/light.png')
+  }
+}
 });
