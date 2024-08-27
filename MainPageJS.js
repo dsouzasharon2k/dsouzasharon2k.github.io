@@ -173,9 +173,9 @@ mediaQuery.addEventListener('change', themeChange)
 // listener 
 function themeChange(event) {
   if (event.matches) {
-    faviconEl.setAttribute('href', '../2_Assets/logo/dark.png')
+    faviconEl.setAttribute('href', '../2_Assets/logo/dark.svg')
   } else {
-    faviconEl.setAttribute('href', '../2_Assets/logo/light.png')
+    faviconEl.setAttribute('href', '../2_Assets/logo/light.svg')
   }
 }
 });
