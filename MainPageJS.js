@@ -1,8 +1,3 @@
-
-
-
-
-
 //-----------------------------------start
 
 document.addEventListener("DOMContentLoaded", function() {
@@ -71,12 +66,15 @@ document.addEventListener("DOMContentLoaded", function() {
 const blob = document.getElementById("blob");
 
 window.onpointermove = event => { 
-  const { clientX, clientY } = event;
-  
-  blob.animate({
-    left: `${clientX}px`,
-    top: `${clientY}px`
-  }, { duration: 3000, fill: "forwards" });
+  // Only run the animation if the blob element exists
+  if (blob) {
+    const { clientX, clientY } = event;
+    
+    blob.animate({
+      left: `${clientX}px`,
+      top: `${clientY}px`
+    }, { duration: 3000, fill: "forwards" });
+  }
 }
 });
 
@@ -87,39 +85,44 @@ document.addEventListener("DOMContentLoaded", function() {
     // Get the SVG element
     const svg = document.getElementById("animated-online-icon");
     
-    // Get all circles with the class "animated-circle"
-    const circles = svg.querySelectorAll('.animated-circle');
-  
-    // Initialize the index to 2 (last circle)
-    let index = 1;
-  
-    // Function to change the fill color of the circles
-    function changeColor() {
-      // Change the fill color of the current circle to green
-      circles[index].setAttribute('fill', '#31EF2D');
-  
-      // Move to the previous circle
-      index--;
-  
-      // If all circles have been changed to green, reset index to 0
-      if(index == 1){
-        circles[index].setAttribute('fill', '#31EF2D');
-      }
-      if (index == -1) {
-        index = 0;
-        // Reset all circles to the background color after a delay
-        setTimeout(() => {
-          circles.forEach(circle => {
-            circle.setAttribute('fill', '');
-          });
-        }, 600); // Adjust this delay as needed
-        index = 1;
-      }
+    // Only proceed if the SVG element exists
+    if (svg) {
+        // Get all circles with the class "animated-circle"
+        const circles = svg.querySelectorAll('.animated-circle');
+        
+        // Only proceed if circles were found
+        if (circles && circles.length > 0) {
+            // Initialize the index to 2 (last circle)
+            let index = 1;
+            
+            // Function to change the fill color of the circles
+            function changeColor() {
+                // Change the fill color of the current circle to green
+                circles[index].setAttribute('fill', '#31EF2D');
+                
+                // Move to the previous circle
+                index--;
+                
+                // If all circles have been changed to green, reset index to 0
+                if(index == 1){
+                    circles[index].setAttribute('fill', '#31EF2D');
+                }
+                if (index == -1) {
+                    index = 0;
+                    // Reset all circles to the background color after a delay
+                    setTimeout(() => {
+                        circles.forEach(circle => {
+                            circle.setAttribute('fill', '');
+                        });
+                    }, 600); // Adjust this delay as needed
+                    index = 1;
+                }
+            }
+            
+            // Call the changeColor function every 0.7 seconds
+            setInterval(changeColor, 700); // Adjust this interval as needed
+        }
     }
-  
-    // Call the changeColor function every 0.7 seconds
-    setInterval(changeColor, 700); // Adjust this interval as needed
-  
 
     //--------------------------------------------------------------------------------------------------------------------------------
     // search-box open close js code
@@ -127,39 +130,55 @@ let navbar = document.querySelector(".navbar");
 let searchBox = document.querySelector(".search-box .bx-search");
 // let searchBoxCancel = document.querySelector(".search-box .bx-x");
 
-searchBox.addEventListener("click", ()=>{
-  navbar.classList.toggle("showInput");
-  if(navbar.classList.contains("showInput")){
-    searchBox.classList.replace("bx-search" ,"bx-x");
-  }else {
-    searchBox.classList.replace("bx-x" ,"bx-search");
-  }
-});
+if (searchBox && navbar) {
+  searchBox.addEventListener("click", ()=>{
+    navbar.classList.toggle("showInput");
+    if(navbar.classList.contains("showInput")){
+      searchBox.classList.replace("bx-search" ,"bx-x");
+    }else {
+      searchBox.classList.replace("bx-x" ,"bx-search");
+    }
+  });
+}
 
 // sidebar open close js code
 let navLinks = document.querySelector(".nav-links");
 let menuOpenBtn = document.querySelector(".navbar .bx-menu");
 let menuCloseBtn = document.querySelector(".nav-links .bx-x");
-menuOpenBtn.onclick = function() {
-navLinks.style.left = "0";
+
+if (menuOpenBtn && navLinks) {
+  menuOpenBtn.onclick = function() {
+    navLinks.style.left = "0";
+  }
 }
-menuCloseBtn.onclick = function() {
-navLinks.style.left = "-100%";
+
+if (menuCloseBtn && navLinks) {
+  menuCloseBtn.onclick = function() {
+    navLinks.style.left = "-100%";
+  }
 }
 
 
 // sidebar submenu open close js code
 let htmlcssArrow = document.querySelector(".htmlcss-arrow");
-htmlcssArrow.onclick = function() {
- navLinks.classList.toggle("show1");
+if (htmlcssArrow) {
+  htmlcssArrow.onclick = function() {
+   navLinks.classList.toggle("show1");
+  }
 }
+
 let moreArrow = document.querySelector(".more-arrow");
-moreArrow.onclick = function() {
- navLinks.classList.toggle("show2");
+if (moreArrow) {
+  moreArrow.onclick = function() {
+   navLinks.classList.toggle("show2");
+  }
 }
+
 let jsArrow = document.querySelector(".js-arrow");
-jsArrow.onclick = function() {
- navLinks.classList.toggle("show3");
+if (jsArrow) {
+  jsArrow.onclick = function() {
+   navLinks.classList.toggle("show3");
+  }
 }
 
     //favicon
@@ -167,15 +186,17 @@ jsArrow.onclick = function() {
 const faviconEl = document.querySelector('link[rel="icon"]')
 
 // watch for changes 
-const mediaQuery = window.matchMedia('(prefers-color-scheme: dark)')
-mediaQuery.addEventListener('change', themeChange)
+if (faviconEl) {
+  const mediaQuery = window.matchMedia('(prefers-color-scheme: dark)')
+  mediaQuery.addEventListener('change', themeChange)
 
-// listener 
-function themeChange(event) {
-  if (event.matches) {
-    faviconEl.setAttribute('href', './2_Assets/dark.svg')
-  } else {
-    faviconEl.setAttribute('href', './2_Assets/light.svg')
+  // listener 
+  function themeChange(event) {
+    if (event.matches) {
+      faviconEl.setAttribute('href', './2_Assets/dark.svg')
+    } else {
+      faviconEl.setAttribute('href', './2_Assets/light.svg')
+    }
   }
 }
 });

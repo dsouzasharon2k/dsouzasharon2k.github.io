@@ -8,64 +8,64 @@
 /* ======================GREET===========================================*/
 @font-face {
   font-family: myCursiveFont;
-  src: url(../2_Assets/fonts/LemonJelly.ttf);
+  src: url(./2_Assets/fonts/LemonJelly.ttf);
 }
 
 @font-face {
   font-family: greeting-font;
-  src: url(../2_Assets/fonts/AudreyTatum.otf);
+  src: url(./2_Assets/fonts/AudreyTatum.otf);
 }
 
 @font-face {
   font-family: greeting-font-2;
-  src: url(../2_Assets/fonts/Xanthoula.ttf);
+  src: url(./2_Assets/fonts/Xanthoula.ttf);
 }
 
 @font-face {
   font-family: greeting-font-3;
-  src: url(../2_Assets/fonts/English\ Speakers.otf);
+  src: url(./2_Assets/fonts/English\ Speakers.otf);
 }
 
 @font-face {
   font-family: name-font;
-  src: url(../2_Assets/fonts/basting-brush.regular.ttf);
+  src: url(./2_Assets/fonts/basting-brush.regular.ttf);
 }
 
 @font-face {
   font-family: name-font-2;
-  src: url(../2_Assets/fonts/rockybilly.regular.ttf);
+  src: url(./2_Assets/fonts/rockybilly.regular.ttf);
 }
 
 @font-face {
   font-family: name-font-3;
-  src: url(../2_Assets/fonts/Hand\ Made.otf);
+  src: url(./2_Assets/fonts/Hand\ Made.otf);
 }
 /*---------------------DEVEloper Profiles-------------------------------------------*/
 
 @font-face {
   font-family: dev-profile-font;
-  src: url(../2_Assets/fonts/chary___.ttf);
+  src: url(./2_Assets/fonts/chary___.ttf);
 }
 
 @font-face {
   font-family: dev-profile-font-2;
-  src: url(../2_Assets/fonts/BACKTO1982.TTF);
+  src: url(./2_Assets/fonts/BACKTO1982.TTF);
 }
 /*---------------------INDIA-------------------------------------------*/
 
 @font-face {
   font-family: india-font;
-  src: url(../2_Assets/fonts/SAMAN___.TTF);
+  src: url(./2_Assets/fonts/SAMAN___.TTF);
 }
 
 @font-face {
   font-family: india-font-2;
-  src: url(../2_Assets/fonts/prakrta_.ttf);
+  src: url(./2_Assets/fonts/prakrta_.ttf);
 }
 
 @font-face {
     font-family: myonlineFont;
-    src: url(../2_Assets/fonts/NotoSansMono-SemiBold.ttf)
+    src: url(./2_Assets/fonts/NotoSansMono-SemiBold.ttf)
 }
 
 :root {
@@ -84,7 +84,7 @@
 .page-background{
   min-height: 100vh;
   background-color: var(--background-color-light);
-  cursor: url('../2_Assets/cursor/cursor-svgrepo-com.png'),auto;
+  cursor: url('./2_Assets/cursor/cursor-svgrepo-com.png'),auto;
 }
 
 /********************************/
